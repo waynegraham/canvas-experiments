@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>
+      {% if page.title %}
+        {{ page.title }}
+      {% endif %}
+      Wayne Graham
+    </title>
+    <meta name="author" content="Wayne Graham" />
+    {% if page.summary %}
+    <meta name="description" content="{{ page.summary }}">
+    {% endif %}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js"></script>
+    <link rel="stylesheet" href="/css/style.css" type="text/css" />
+    
+    {% for css in page.css %}
+       <link rel="stylesheet" href="{{ css }}" type="text/css" />
+    {% endfor %}
+
+    {% for javascript in page.javascripts %}
+    <script src="{{ javascript }}"></script>
+    {% endfor %}
+  </head>
+  <body>
+    {{ content }}
+  </body>
+</html>
