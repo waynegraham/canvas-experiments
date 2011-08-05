@@ -53,8 +53,7 @@ var kin, letter, fonts, canvas, context;
         return Math.floor(Math.random() * (to - from + 1) + from);
       }
 
-      //$(document).ready(function(){
-      
+      $(document).ready(function(){
         canvas = document.getElementById('letters');
         context = canvas.getContext('2d');
 
@@ -85,5 +84,5 @@ var kin, letter, fonts, canvas, context;
         });
 
         stage.start();
-      //});
+      });
 
